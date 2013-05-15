@@ -8,6 +8,8 @@ require 'base64'
 
 $: << File.dirname(__FILE__) + "/lib"
 
+require 'witchcraft'
+
 enable :logging, :dump_errors, :raise_errors, :show_exceptions
 
 
