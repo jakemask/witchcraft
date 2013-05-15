@@ -54,8 +54,8 @@ sig64 = Base64.encode64(signature)
 
 # Post dat request
 
-uri = URI(target)
-res = Net::HTTP.post_form(uri, :url => long, :signature => sig, :short => short )
+uri = URI.join(target,"new")
+res = Net::HTTP.post_form(uri, :url => long, :signature => sig64, :short => short )
 
 unless res.code == '201'
   puts res.body

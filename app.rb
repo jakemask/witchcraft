@@ -8,6 +8,9 @@ require 'base64'
 
 $: << File.dirname(__FILE__) + "/lib"
 
+enable :logging, :dump_errors, :raise_errors, :show_exceptions
+
+
 ##
 # Databse
 
