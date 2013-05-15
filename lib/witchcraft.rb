@@ -4,9 +4,6 @@ module Witchcraft
 
   def Witchcraft.verify(signature, data, keypath="public.pem")
 
-    # Make keys if there are none
-    Witchcraft.makeKeys unless File.exists?(keypath)
-
     # Validate the Signature
     public_key = OpenSSL::PKey::RSA.new(File.read(keypath))
     digest = OpenSSL::Digest::SHA512.new
