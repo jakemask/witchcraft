@@ -52,7 +52,18 @@ end
 # Post Routes
 
 post '/new' do
-
+  
+  unless params[:request].nil?
+    unless File.exists?("private.pem")
+      Witchcraft.makeKeys
+      status 201
+      return "keys made"
+    else
+      status 412
+      return "keys already made brah"
+    end
+  end
+ 
   # Validate the Signature
   valid = Witchcraft.verify(Base64.decode64(params[:signature]), params[:url]) 
   
