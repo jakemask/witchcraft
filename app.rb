@@ -10,7 +10,7 @@ $: << File.dirname(__FILE__) + "/lib"
 
 require 'witchcraft'
 
-enable :logging, :dump_errors, :raise_errors, :show_exceptions
+#enable :logging, :dump_errors, :raise_errors, :show_exceptions
 
 
 ##
