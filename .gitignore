@@ -1,0 +1,8 @@
+id_rsa*
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
