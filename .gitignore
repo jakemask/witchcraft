@@ -1,4 +1,6 @@
-id_rsa*
+*.pem
+error.html
+dev.db
 
 ## generic files to ignore
 *~

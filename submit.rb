@@ -45,7 +45,7 @@ print_usage "Invalid shortening" unless short.nil? or alpha?(short)
 
 # Encode the long link to create a signature 
 
-priv_key = OpenSSL::PKey::RSA.new(File.read(File.join(Dir.home,"/.ssh/id_rsa")))
+priv_key = OpenSSL::PKey::RSA.new(File.read("private.pem"))
 digest = OpenSSL::Digest::SHA512.new
 
 signature = priv_key.sign(digest, long)
