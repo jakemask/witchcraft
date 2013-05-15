@@ -6,7 +6,7 @@ require 'haml'
 require 'openssl'
 require 'base64'
 
-require './witchcraft.rb'
+$: << File.dirname(__FILE__) + "/lib"
 
 ##
 # Databse
