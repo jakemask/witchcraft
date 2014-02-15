@@ -16,7 +16,7 @@ It will immediately start serving links. Right now the root redirects to
 
 To add links to the list, you can either launch up an irb session via
 `irb -r ./app.rb` and add them manually, e.g.
-`List.create(:long => "http://google.com", :short => "g00g")`, or you can use
+`Link.create(:long => "http://google.com", :short => "g00g")`, or you can use
 the submit.rb file.
 
 In order to use submit.rb, copy your rsa public key into a file named id_rsa.pub
